@@ -45,7 +45,7 @@ m <- c(280, 420)
 v=c(4*(10.1^4), 10.1^5)
 sigma = c(sqrt(4*10^4), sqrt(10^5))
 
-Estimator <- BLE_SSRS(ys,h,N,m,v,sigma)
+Estimator <- BLE_SSRS(ys, h, N, m, v, sigma)
 
 ## ----ex 1.4-------------------------------------------------------------------
 Estimator$est.beta
@@ -54,12 +54,25 @@ Estimator$Vest.beta
 ## ----ex 2---------------------------------------------------------------------
 ys <- c(2,-1,1.5, 6,10, 8,8)
 h <- c(3,2,2)
+N <- c(5,5,3)
 m <- c(0,9,8)
 v <- c(3,8,1)
 sigma <- c(1,2,0.5)
+
+Estimator <- BLE_SSRS(ys, h, N, m, v, sigma)
+Estimator
+
+## ----ex 3---------------------------------------------------------------------
+y1 <- mean(c(2,-1,1.5))
+y2 <- mean(c(6,10))
+y3 <- mean(c(8,8))
+ys <- c(y1, y2, y3)
+h <- c(3,2,2)
 N <- c(5,5,3)
+m <- c(0,9,8)
+v <- c(3,8,1)
+sigma <- c(1,2,0.5)
 
-
-Estimator <- BLE_SSRS(ys,h,N,m,v,sigma)
+Estimator <- BLE_SSRS(ys, h, N, m, v, sigma)
 Estimator
 

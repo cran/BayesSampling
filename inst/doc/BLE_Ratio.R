@@ -33,7 +33,7 @@ mean(ys)/mean(xs)
 ## ----ex 1.3-------------------------------------------------------------------
 x_nots <- BigCity_red$Income[-sampl]
 
-Estimator <- BLE_Ratio(ys,xs,x_nots, m = 0.85, v = 0.24, sigma = sqrt(0.23998))
+Estimator <- BLE_Ratio(ys, xs, x_nots, m = 0.85, v = 0.24, sigma = sqrt(0.23998))
 
 Estimator$est.beta
 Estimator$Vest.beta
@@ -49,7 +49,18 @@ m <- 2.5
 v <- 10
 sigma <- 2
 
+Estimator <- BLE_Ratio(ys, xs, x_nots, m, v, sigma)
+Estimator
 
-Estimator <- BLE_Ratio(ys,xs,x_nots,m,v,sigma)
+## ----ex 3---------------------------------------------------------------------
+ys <- mean(c(10,8,6))
+xs <- mean(c(5,4,3.1))
+n <- 3
+x_nots <- c(1,20,13,15,-5)
+m <- 2.5
+v <- 10
+sigma <- 2
+
+Estimator <- BLE_Ratio(ys, xs, x_nots, m, v, sigma, n)
 Estimator
 

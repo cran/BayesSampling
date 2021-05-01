@@ -27,11 +27,22 @@ Estimator$Vest.mean[1:5,1:5]
 
 ## ----ex 2---------------------------------------------------------------------
 ys <- c(5,6,8)
+N <- 5
 m <- 6
 v <- 5
 sigma <- 1
-N <- 5
 
-Estimator <- BLE_SRS(ys,N,m,v,sigma)
+Estimator <- BLE_SRS(ys, N, m, v, sigma)
+Estimator
+
+## ----ex 3---------------------------------------------------------------------
+ys <- mean(c(5,6,8))
+n <- 3
+N <- 5
+m <- 6
+v <- 5
+sigma <- 1
+
+Estimator <- BLE_SRS(ys, N, m, v, sigma, n)
 Estimator
 
